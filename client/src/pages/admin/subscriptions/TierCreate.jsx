@@ -3,10 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { Plus, Trash2, Save, XCircle, Shield, Zap, Info, CreditCard } from "lucide-react";
 import { createTierPlan } from "../../../api/tierPlan.api";
 import { toast } from "react-toastify";
+import InputField from "../../../components/common/InputField";
 
 // Default States
 const defaultLimit = { limitsName: "", limitsValue: "" };
 const defaultFeature = { featureName: "", featureDescription: "" };
+
+
 
 const TierCreate = () => {
   const navigate = useNavigate();
@@ -65,18 +68,18 @@ const TierCreate = () => {
   };
 
   // Reusable Input Field
-  const InputField = ({ label, value, setValue, type = "text", placeholder = "" }) => (
-    <div className="space-y-1">
-      <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wide">{label}</label>
-      <input
-        type={type}
-        value={value}
-        placeholder={placeholder}
-        onChange={(e) => setValue(e.target.value)}
-        className="w-full px-4 py-2.5 rounded-xl bg-[#050810] border border-white/10 text-white text-sm focus:border-blue-500 focus:outline-none transition"
-      />
-    </div>
-  );
+  // const InputField = ({ label, value, setValue, type = "text", placeholder = "" }) => (
+  //   <div className="space-y-1">
+  //     <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wide">{label}</label>
+  //     <input
+  //       type={type}
+  //       value={value}
+  //       placeholder={placeholder}
+  //       onChange={(e) => setValue(e.target.value)}
+  //       className="w-full px-4 py-2.5 rounded-xl bg-[#050810] border border-white/10 text-white text-sm focus:border-blue-500 focus:outline-none transition"
+  //     />
+  //   </div>
+  // );
 
   return (
     <div className="min-h-screen bg-[#050810] p-6 lg:p-10 text-slate-300 font-sans selection:bg-blue-500/30">
