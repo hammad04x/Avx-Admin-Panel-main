@@ -199,7 +199,7 @@ const ImageUploader = ({ label, image, onChange }) => (
       bg-black/30 hover:bg-black/40 transition overflow-hidden"
     >
       {image ? (
-        <img src={image.preview} alt="preview" className="h-full w-full object-cover" />
+        <img src={image.preview} alt="preview" className="h-full w-full object-contain" />
       ) : (
         <>
           <ImagePlus className="text-gray-400" />
