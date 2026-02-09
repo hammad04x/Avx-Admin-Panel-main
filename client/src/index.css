@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+.icon-btn {
+  @apply w-8 h-8 rounded-lg flex items-center justify-center
+  text-white text-xs transition;
+}
+*{
+  scrollbar-width: none;
+}
+body{
+  height: 100%;
+  overflow: hidden;
+  
+}
